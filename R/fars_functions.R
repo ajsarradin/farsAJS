@@ -1,3 +1,5 @@
+setwd(system.file("extdata", package = "farsAJS"))
+
 #' Read FARS file
 #'
 #' Function that reads a csv file and converts it into a \code{tbl_df} table.
