@@ -27,6 +27,8 @@ library(farsAJS)
 
 ```
 
+some text
+
 ```{r make_filename}
 year<-c(2013)
 filename<-make_filename(year)
@@ -34,11 +36,15 @@ filename
 
 ```
 
+some text
+
 ```{r fars_read}
 ds<-fars_read(filename)
 head(ds)
 
 ```
+
+some text
 
 ```{r fars_read_years}
 fars_read_years(2013)
@@ -46,10 +52,14 @@ fars_read_years(2013:2015)[[2]]
 
 ```
 
+some text
+
 ```{r fars_summarize_years}
 fars_summarize_years(2013:2015)
 
 ```
+
+some text
 
 ```{r fars_map_state, fig.show='hold', fig.cap ="Your figure caption"}
 fars_map_state(28,2014)
