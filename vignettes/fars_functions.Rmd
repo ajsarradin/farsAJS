@@ -25,6 +25,8 @@ knitr::opts_chunk$set(
 #devtools::load_all(getwd())
 library(farsAJS)
 
+setwd(system.file("extdata", package = "farsAJS"))
+
 ```
 
 some text
