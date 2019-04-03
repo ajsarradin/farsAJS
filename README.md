@@ -1,6 +1,8 @@
 # farsAJS
 
-The goal of farsAJS is to ...
+The goal of farsAJS is to make it easier to read, filter, summarise, and plot data 
+  for road accidents from the US National Highway Traffic Safety Administration's 
+  Fatality Analysis Reporting System (FARS).
 
 ## Installation
 
@@ -12,10 +14,18 @@ install.packages("farsAJS")
 
 ## Example
 
-This is a basic example which shows you how to solve a common problem:
+This is a basic example which shows you how use the farsAJS package to laod FARS data for the year 2013.
 
 ``` r
-## basic example code
+library(farsAJS)
+
+year<-c(2013)
+filename<-make_filename(year)
+filename
+
+ds<-fars_read(filename)
+head(ds)
+
 ```
 
 [![Travis build status](https://travis-ci.org/ajsarradin/farsAJS.svg?branch=master)](https://travis-ci.org/ajsarradin/farsAJS)
