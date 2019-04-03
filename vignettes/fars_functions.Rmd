@@ -1,0 +1,60 @@
+---
+title: "Functions of the farsAJS package"
+author: "ajsarradin"
+date: "`r Sys.Date()`"
+output: 
+  rmarkdown::html_vignette:
+  fig_caption: yes
+vignette: >
+  %\VignetteIndexEntry{Functions of the farsAJS package}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r packages, include=F}
+
+# I should underline that vignette is build automatically when your build your package. So, when development are finish, replace in the vignette devtools::load_all by library because your package is loaded before building the vignette when you build a package.
+
+#devtools::load_all(getwd())
+library(farsAJS)
+
+```
+
+```{r make_filename}
+year<-c(2013)
+filename<-make_filename(year)
+filename
+
+```
+
+```{r fars_read}
+ds<-fars_read(filename)
+head(ds)
+
+```
+
+```{r fars_read_years}
+fars_read_years(2013)
+fars_read_years(2013:2015)[[2]]
+
+```
+
+```{r fars_summarize_years}
+fars_summarize_years(2013:2015)
+
+```
+
+```{r fars_map_state, fig.show='hold', fig.cap ="Your figure caption"}
+fars_map_state(28,2014)
+fars_map_state(54,2015)
+
+```
+
+
