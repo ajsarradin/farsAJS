@@ -12,7 +12,7 @@ fars_map_state(state.num, year)
 \item{year}{Year to be included in the file name}
 }
 \value{
-This function returns a map plot created with \link{maps::map}, displaying
+This function returns a map plot created with \link{map}, displaying
 location information for the selected US state and year. The function returns an error it the
 \code{state.num} or \code{year} are not valid or if there are no observations for the chosen \code{state.num}
 and \code{year}.
@@ -25,8 +25,7 @@ and \code{year}.
 \code{fars_map_state} is built on the \link{fars_read} and \link{make_filename} functions.
 }
 \examples{
-\dontrun{
+setwd(system.file("extdata", package = "farsAJS", mustWork = TRUE))
 fars_map_state(28,2014)
-}
 
 }

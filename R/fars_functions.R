@@ -1,4 +1,4 @@
-#setwd(system.file("extdata", package = "farsAJS"))
+#setwd(system.file("extdata", package = "farsAJS", mustWork = TRUE))
 
 #' Read FARS file
 #'
@@ -13,10 +13,9 @@
 #' @importFrom dplyr tbl_df
 #'
 #' @examples
-#' \dontrun{
-#' fars_read("file.csv")
-#' fars_read("dir/file.csv")
-#'}
+#' setwd(system.file("extdata", package = "farsAJS", mustWork = TRUE))
+#' fars_read("accident_2013.csv.bz2")
+#' fars_read("make_filename(2014))
 #'
 #' @export
 fars_read <- function(filename) {
@@ -39,10 +38,9 @@ fars_read <- function(filename) {
 #' @return This function returns a file name as character string
 #'
 #' @examples
-#' \dontrun{
+#' setwd(system.file("extdata", package = "farsAJS", mustWork = TRUE))
 #' make_filename(2014)
 #' fars_read(make_filename(2015))
-#'}
 #'
 #' @export
 make_filename <- function(year) {
@@ -70,10 +68,9 @@ make_filename <- function(year) {
 #' @importFrom magrittr "%>%"
 #'
 #' @examples
-#' \dontrun{
+#' setwd(system.file("extdata", package = "farsAJS", mustWork = TRUE))
 #' fars_read_years(2014)
-#' fars_read_years(2013:2015)
-#'}
+#' fars_read_years(2013:2015)[[2]]
 #'
 #' @export
 fars_read_years <- function(years) {
@@ -112,10 +109,9 @@ fars_read_years <- function(years) {
 #' @importFrom magrittr "%>%"
 #'
 #' @examples
-#' \dontrun{
+#' setwd(system.file("extdata", package = "farsAJS", mustWork = TRUE))
 #' fars_summarize_years(2014)
 #' fars_summarize_years(2013:2015)
-#'}
 #'
 #' @export
 fars_summarize_years <- function(years) {
@@ -138,7 +134,7 @@ fars_summarize_years <- function(years) {
 #'
 #' @param state.num Number of the state for which to extract data. Only
 #'
-#' @return This function returns a map plot created with \link{maps::map}, displaying
+#' @return This function returns a map plot created with \link{map}, displaying
 #' location information for the selected US state and year. The function returns an error it the
 #' \code{state.num} or \code{year} are not valid or if there are no observations for the chosen \code{state.num}
 #' and \code{year}.
@@ -149,9 +145,8 @@ fars_summarize_years <- function(years) {
 #' @importFrom magrittr "%>%"
 #'
 #' @examples
-#' \dontrun{
+#' setwd(system.file("extdata", package = "farsAJS", mustWork = TRUE))
 #' fars_map_state(28,2014)
-#' }
 #'
 #' @export
 fars_map_state <- function(state.num, year) {

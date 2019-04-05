@@ -16,10 +16,3 @@ file does not exists.
 \description{
 Function that reads a csv file and converts it into a \code{tbl_df} table.
 }
-\examples{
-\dontrun{
-fars_read("file.csv")
-fars_read("dir/file.csv")
-}
-
-}
