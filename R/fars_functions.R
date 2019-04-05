@@ -13,9 +13,10 @@
 #' @importFrom dplyr tbl_df
 #'
 #' @examples
-#' setwd(system.file("extdata", package = "farsAJS", mustWork = TRUE))
+#' \dontrun{
 #' fars_read("accident_2013.csv.bz2")
 #' fars_read("make_filename(2014))
+#'}
 #'
 #' @export
 fars_read <- function(filename) {
@@ -38,9 +39,10 @@ fars_read <- function(filename) {
 #' @return This function returns a file name as character string
 #'
 #' @examples
-#' setwd(system.file("extdata", package = "farsAJS", mustWork = TRUE))
+#' \dontrun{
 #' make_filename(2014)
 #' fars_read(make_filename(2015))
+#'}
 #'
 #' @export
 make_filename <- function(year) {
@@ -68,9 +70,10 @@ make_filename <- function(year) {
 #' @importFrom magrittr "%>%"
 #'
 #' @examples
-#' setwd(system.file("extdata", package = "farsAJS", mustWork = TRUE))
+#' \dontrun{
 #' fars_read_years(2014)
 #' fars_read_years(2013:2015)[[2]]
+#'}
 #'
 #' @export
 fars_read_years <- function(years) {
@@ -109,9 +112,10 @@ fars_read_years <- function(years) {
 #' @importFrom magrittr "%>%"
 #'
 #' @examples
-#' setwd(system.file("extdata", package = "farsAJS", mustWork = TRUE))
+#' \dontrun{
 #' fars_summarize_years(2014)
 #' fars_summarize_years(2013:2015)
+#'}
 #'
 #' @export
 fars_summarize_years <- function(years) {
@@ -145,8 +149,9 @@ fars_summarize_years <- function(years) {
 #' @importFrom magrittr "%>%"
 #'
 #' @examples
-#' setwd(system.file("extdata", package = "farsAJS", mustWork = TRUE))
+#' \dontrun{
 #' fars_map_state(28,2014)
+#'}
 #'
 #' @export
 fars_map_state <- function(state.num, year) {

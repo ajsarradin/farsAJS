@@ -17,8 +17,9 @@ Function that returns a file name as character string containing a year specifie
 Can be used in combination with \link{fars_read}.
 }
 \examples{
-setwd(system.file("extdata", package = "farsAJS", mustWork = TRUE))
+\dontrun{
 make_filename(2014)
 fars_read(make_filename(2015))
+}
 
 }

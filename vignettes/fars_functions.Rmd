@@ -25,8 +25,6 @@ knitr::opts_chunk$set(
 #devtools::load_all(getwd())
 library(farsAJS)
 
-setwd(system.file("extdata", package = "farsAJS", mustWork = TRUE))
-
 ```
 
 The **farsAJS** package offers several functions that make it easier to read, filter, summarise, and plot data for road accidents from the US National Highway Traffic Safety Administration's Fatality Analysis Reporting System (FARS).

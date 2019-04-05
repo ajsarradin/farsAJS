@@ -23,8 +23,9 @@ The function selects files with names containing one of the year(s) specified by
 \code{fars_read_years} is built on the \link{fars_read} and \link{make_filename} functions.
 }
 \examples{
-setwd(system.file("extdata", package = "farsAJS", mustWork = TRUE))
+\dontrun{
 fars_read_years(2014)
 fars_read_years(2013:2015)[[2]]
+}
 
 }

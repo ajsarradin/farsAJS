@@ -25,7 +25,8 @@ and \code{year}.
 \code{fars_map_state} is built on the \link{fars_read} and \link{make_filename} functions.
 }
 \examples{
-setwd(system.file("extdata", package = "farsAJS", mustWork = TRUE))
+\dontrun{
 fars_map_state(28,2014)
+}
 
 }
