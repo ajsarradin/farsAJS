@@ -18,14 +18,15 @@ location information for the selected US state and year. The function returns an
 and \code{year}.
 }
 \description{
-Function that plots location data for a US state and year specified by the arguements \code{state.num}
+Function that plots location data for a US state and year specified by the arguments \code{state.num}
 and \code{year}.
 }
 \details{
 \code{fars_map_state} is built on the \link{fars_read} and \link{make_filename} functions.
 }
 \examples{
-\dontrun{fars_map_state(28,2014)
+\dontrun{
+fars_map_state(28,2014)
 }
 
 }

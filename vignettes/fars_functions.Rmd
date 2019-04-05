@@ -25,11 +25,15 @@ knitr::opts_chunk$set(
 #devtools::load_all(getwd())
 library(farsAJS)
 
-setwd(system.file("extdata", package = "farsAJS"))
+#setwd(system.file("extdata", package = "farsAJS"))
 
 ```
 
-some text
+The **farsAJS** package offers several functions that make it easier to read, filter, summarise, and plot data for road accidents from the US National Highway Traffic Safety Administration's Fatality Analysis Reporting System (FARS).
+
+<br/>
+
+**filename** returns the file name from the FARS data that contains the *year* specified by the user. To be used in combination with **fars_read**.
 
 ```{r make_filename}
 year<-c(2013)
@@ -38,7 +42,7 @@ filename
 
 ```
 
-some text
+**fars_read** reads a csv file and converts it into a *tbl_df* table. It can be used in combination with **filename**.
 
 ```{r fars_read}
 ds<-fars_read(filename)
@@ -46,7 +50,8 @@ head(ds)
 
 ```
 
-some text
+**fars_read_years** reads one or more csv files, converts them into *tbl_df* tables, extracts *year* and *month*
+information from these tables and stores the result in a *list* object with one entry per year.
 
 ```{r fars_read_years}
 fars_read_years(2013)
@@ -54,14 +59,16 @@ fars_read_years(2013:2015)[[2]]
 
 ```
 
-some text
+**fars_summarize_years** reads one or more csv files, converts them into *tbl_df* tables, extracts *year* and *month*
+information from these tables, counts the number of observations per month for each year and stores the result
+in a *tbl_df* table with one column per year.
 
 ```{r fars_summarize_years}
 fars_summarize_years(2013:2015)
 
 ```
 
-some text
+**fars_map_state** plots location data for a US state and year specified by the user.
 
 ```{r fars_map_state, fig.show='hold', fig.cap ="Your figure caption"}
 fars_map_state(28,2014)

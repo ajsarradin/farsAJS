@@ -1,4 +1,4 @@
-setwd(system.file("extdata", package = "farsAJS"))
+#setwd(system.file("extdata", package = "farsAJS"))
 
 #' Read FARS file
 #'
@@ -13,7 +13,8 @@ setwd(system.file("extdata", package = "farsAJS"))
 #' @importFrom dplyr tbl_df
 #'
 #' @examples
-#' \dontrun{fars_read("file.csv")
+#' \dontrun{
+#' fars_read("file.csv")
 #' fars_read("dir/file.csv")
 #'}
 #'
@@ -38,7 +39,8 @@ fars_read <- function(filename) {
 #' @return This function returns a file name as character string
 #'
 #' @examples
-#' \dontrun{make_filename(2014)
+#' \dontrun{
+#' make_filename(2014)
 #' fars_read(make_filename(2015))
 #'}
 #'
@@ -68,7 +70,8 @@ make_filename <- function(year) {
 #' @importFrom magrittr "%>%"
 #'
 #' @examples
-#' \dontrun{fars_read_years(2014)
+#' \dontrun{
+#' fars_read_years(2014)
 #' fars_read_years(2013:2015)
 #'}
 #'
@@ -109,7 +112,8 @@ fars_read_years <- function(years) {
 #' @importFrom magrittr "%>%"
 #'
 #' @examples
-#' \dontrun{fars_summarize_years(2014)
+#' \dontrun{
+#' fars_summarize_years(2014)
 #' fars_summarize_years(2013:2015)
 #'}
 #'
@@ -125,7 +129,7 @@ fars_summarize_years <- function(years) {
 
 #' Map FARS accident locations data for a specified US state and year
 #'
-#' Function that plots location data for a US state and year specified by the arguements \code{state.num}
+#' Function that plots location data for a US state and year specified by the arguments \code{state.num}
 #' and \code{year}.
 #'
 #' \code{fars_map_state} is built on the \link{fars_read} and \link{make_filename} functions.
@@ -145,7 +149,8 @@ fars_summarize_years <- function(years) {
 #' @importFrom magrittr "%>%"
 #'
 #' @examples
-#' \dontrun{fars_map_state(28,2014)
+#' \dontrun{
+#' fars_map_state(28,2014)
 #' }
 #'
 #' @export
