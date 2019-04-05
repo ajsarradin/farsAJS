@@ -25,13 +25,7 @@ and \code{year}.
 \code{fars_map_state} is built on the \link{fars_read} and \link{make_filename} functions.
 }
 \examples{
-fars_map_state(28,2014)
-
-\dontrun{
-fars_map_state("12","2014")
-fars_map_state(43,2013:2015)
-fars_map_state(14,"2014-01-09")
-fars_map_state(16, make_filename(2014))
+\dontrun{fars_map_state(28,2014)
 }
 
 }

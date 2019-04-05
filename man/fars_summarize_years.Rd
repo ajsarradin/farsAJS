@@ -23,7 +23,8 @@ The function selects files with names containing one of the year(s) specified by
 \code{fars_summarize_years} is built on the \link{fars_read_years} function.
 }
 \examples{
-fars_summarize_years(2014)
+\dontrun{fars_summarize_years(2014)
 fars_summarize_years(2013:2015)
+}
 
 }

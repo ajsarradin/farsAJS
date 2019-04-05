@@ -13,8 +13,9 @@ setwd(system.file("extdata", package = "farsAJS"))
 #' @importFrom dplyr tbl_df
 #'
 #' @examples
-#' fars_read("file.csv")
+#' \dontrun{fars_read("file.csv")
 #' fars_read("dir/file.csv")
+#'}
 #'
 #' @export
 fars_read <- function(filename) {
@@ -37,8 +38,9 @@ fars_read <- function(filename) {
 #' @return This function returns a file name as character string
 #'
 #' @examples
-#' make_filename(2014)
+#' \dontrun{make_filename(2014)
 #' fars_read(make_filename(2015))
+#'}
 #'
 #' @export
 make_filename <- function(year) {
@@ -66,8 +68,9 @@ make_filename <- function(year) {
 #' @importFrom magrittr "%>%"
 #'
 #' @examples
-#' fars_read_years(2014)
+#' \dontrun{fars_read_years(2014)
 #' fars_read_years(2013:2015)
+#'}
 #'
 #' @export
 fars_read_years <- function(years) {
@@ -106,8 +109,9 @@ fars_read_years <- function(years) {
 #' @importFrom magrittr "%>%"
 #'
 #' @examples
-#' fars_summarize_years(2014)
+#' \dontrun{fars_summarize_years(2014)
 #' fars_summarize_years(2013:2015)
+#'}
 #'
 #' @export
 fars_summarize_years <- function(years) {
@@ -141,13 +145,7 @@ fars_summarize_years <- function(years) {
 #' @importFrom magrittr "%>%"
 #'
 #' @examples
-#' fars_map_state(28,2014)
-#'
-#' \dontrun{
-#' fars_map_state("12","2014")
-#' fars_map_state(43,2013:2015)
-#' fars_map_state(14,"2014-01-09")
-#' fars_map_state(16, make_filename(2014))
+#' \dontrun{fars_map_state(28,2014)
 #' }
 #'
 #' @export
